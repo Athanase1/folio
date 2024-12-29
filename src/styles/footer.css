@@ -1,0 +1,27 @@
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1vw;
+}
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+footer div i{
+    margin: 0 0.5rem;
+    color: black;
+}
+footer div i:hover{
+    color: gray;
+}
+
+@media screen and (max-width: 1024px){
+    footer{
+        flex-direction: column-reverse;
+        font-size: 2vw;
+    }
+}

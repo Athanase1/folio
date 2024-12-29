@@ -1,0 +1,254 @@
+
+.portfolio{
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 95vh;
+    padding: 1rem;
+}
+aside{
+    width: fit-content;
+    color: black;
+    padding: 1rem;
+    background-color: azure;
+    height: 92vh;
+    border-radius: 20px;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+aside:hover{
+   
+    opacity: 0.8;
+}
+aside li{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+aside ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+aside li a{
+    color: black;
+    font-size: 1vw;
+}
+aside li:hover a{
+   color: gray;
+}
+.portolioContent{
+    flex: 1;
+    overflow: auto;
+}
+section{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+.section-item:nth-child(2){
+    transition-delay: 200ms;
+}
+.section-item:nth-child(3){
+    transition-delay: 400ms;
+}
+aside ul h1{
+    font-size: 1vw;
+    color: #131316;
+   }
+   .aprops{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+   }
+   .aprops p{
+        text-align: left;
+        font-size: 1vw;
+        padding: 1rem;
+        width: 95%;
+        padding: 1rem;
+        border-radius: 20px;
+       
+   }
+   form{
+    display: flex;
+    flex-direction: column;
+   }
+   .aprops p:hover{
+        box-shadow: 0 2px 2px white;
+       
+   }
+   label{
+    margin-top: 1vh;
+   }
+   .service ul{
+        list-style: number;
+        display: flex;
+     
+        margin: 1rem;
+   }
+   #submit{
+    margin-top: 1rem;
+    animation: none;
+   }
+   .service ul li{
+    margin: 0 1rem;
+    font-size: 2vw;
+   }
+   section h1{
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid white;
+   }
+   textarea{
+    border-radius: 10px;
+   }
+   input{
+    border-radius: 5px;
+   }
+   #spc{
+    border: none;
+    text-align: left;
+   }
+
+/*@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}*/
+@media screen and (max-width:500px){
+
+    aside{
+        display: none;
+    }
+   h1{
+        font-size: 4vw;
+   }
+   h3{
+        font-size: 3vw;
+   }
+   h4{
+        font-size: 2vw;
+   }
+   .service ul{
+        flex-direction: column;
+   }
+ 
+   .aprops{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   }
+   .aprops p{
+        font-size: 4vw;
+        text-align: center;
+        box-shadow: none;
+   }
+   .card{
+        min-width: 300px;
+   }
+   .card-container{
+    justify-content: flex-end;
+    overflow: auto;
+   }
+}
+@media screen and (min-width:501px) and (max-width:1024px){
+    .portfolio{
+        flex-direction: column;
+        align-items: center;
+    }
+    aside{
+        width: 80%;
+        height: fit-content;
+        margin: 0;
+        justify-content: center;
+        padding: 0;
+    }
+    h4{
+        font-size: 1.5vw;
+    }
+    aside ul {
+        flex-direction: row;
+        position: absolute;
+        z-index: 1;
+        align-items: center;
+    }
+    aside ul h1{
+        display: none;
+    }
+    aside ul li{
+        margin: 0 1rem;
+    }
+    aside ul li a{
+        color: white;
+    }
+}
+@media screen and (max-width:900px){
+    aside ul li a{
+        font-size: 1.2vw;
+        text-transform: uppercase;
+        color: gray;
+    }
+    aside{
+        width: 100%;
+    }
+    .aprops p{
+        font-size: 1.5vw;
+    }
+
+}
+.card-container{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+    align-items: flex-start;
+}
+.card {
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.card:hover{
+    opacity: 0.9;
+}
+.card img{
+    height: 90%;
+    width: 100%;
+}
+.card h5{
+    color: #131316;
+    
+}
