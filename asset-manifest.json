@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/folio/static/css/main.84b83706.css",
+    "main.js": "/folio/static/js/main.925fc93f.js",
+    "static/media/moi3.png": "/folio/static/media/moi3.84ca1c519bc08f7f37e7.png",
+    "static/media/node.png": "/folio/static/media/node.e1d9233897fbe03fda7b.png",
+    "static/media/Moi1.jpg": "/folio/static/media/Moi1.bcddcc3e47a5d0787ae3.jpg",
+    "static/media/js.png": "/folio/static/media/js.92169892ea013a5154bd.png",
+    "static/media/plsql.jpg": "/folio/static/media/plsql.ed5f079be01530604c0b.jpg",
+    "static/media/app21.png": "/folio/static/media/app21.0717b33b076b6d1530cf.png",
+    "static/media/mysql.png": "/folio/static/media/mysql.60fe462b4dec8bbc0292.png",
+    "static/media/React.png": "/folio/static/media/React.f9736c852ee8df4ede69.png",
+    "static/media/webstorm.png": "/folio/static/media/webstorm.32ec2e90de48d5a2be93.png",
+    "static/media/moi4.jpg": "/folio/static/media/moi4.e1b5b2d89b6947184bea.jpg",
+    "static/media/postgress.webp": "/folio/static/media/postgress.15a2b749ffab0e5ab046.webp",
+    "static/media/html.png": "/folio/static/media/html.985928a23182f6903d68.png",
+    "static/media/php.jpg": "/folio/static/media/php.52b369643e20d7c22096.jpg",
+    "static/media/app13.png": "/folio/static/media/app13.e0273a8222deede28ea4.png",
+    "static/media/java.png": "/folio/static/media/java.fc241426afd8f52a312e.png",
+    "static/media/app11.png": "/folio/static/media/app11.08a03aaffbe51a02a2be.png",
+    "static/media/app12.png": "/folio/static/media/app12.ee2a4c41e19a16466d52.png",
+    "static/media/app32.png": "/folio/static/media/app32.9089c036e7bec7ef3c54.png",
+    "static/media/css.webp": "/folio/static/media/css.fd9cd08e6a4d7b455147.webp",
+    "static/media/app31.png": "/folio/static/media/app31.f1beb7e54a59fed7b452.png",
+    "static/media/junit.png": "/folio/static/media/junit.46fa4ef1b56fe830e022.png",
+    "static/media/intellij.jpg": "/folio/static/media/intellij.27b63940af8178a00121.jpg",
+    "static/media/jquery.jpg": "/folio/static/media/jquery.2ffc9dfdbf574b26e26f.jpg",
+    "index.html": "/folio/index.html",
+    "main.84b83706.css.map": "/folio/static/css/main.84b83706.css.map",
+    "main.925fc93f.js.map": "/folio/static/js/main.925fc93f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84b83706.css",
+    "static/js/main.925fc93f.js"
+  ]
+}
