@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { HashRouter as Router, Routes, Route} from "react-router-dom";
 import LayOut from "./components/layout/layout";
 import Home from "../src/components/pages/home"
 import About from "../src/components/pages/about"
@@ -8,16 +8,16 @@ import Profiles from "../src/components/pages/portfolio"
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
     <Routes>
       <Route path="/" element={<LayOut />} >
         <Route index element={<Home />}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/projets" element={<Projects/>}/>
-        <Route path="/profile" element={<Profiles/>}/>
+        <Route path="/portfolio" element={<Profiles/>}/>
       </Route>
     </Routes>
-  </BrowserRouter>
+  </Router>
   );
 }
 

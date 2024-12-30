@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import "../../styles/portfolio.css"
 import { Frontend, Backend, Autres } from "../../assets/data/data";
 import Carousel from "../carousel/carousel";
+import { HashLink } from 'react-router-hash-link';
 export default function Profiles(){
     /*useEffect(() =>{
         const form = document.getElementById('contact-form');
@@ -57,16 +58,16 @@ form.addEventListener('submit', async (event) => {
 
     return (
         <div className="portfolio">
-            <aside>
+           <aside>
                 <ul>
                     <h1>Naviguer cette page</h1>
-                    <li><a href="#section1">Section introduction</a></li>
-                    <li> <a href="#section2">Projects récents</a></li>
-                    <li> <a href="#section3">À propos de moi</a></li>
-                    <li><a href="#section4">Services offerts</a></li>
-                    <li><a href="#section5">Compétences</a></li>
-                    <li><a href="#section6">Contacts</a></li>
-                </ul>
+                    <li><HashLink smooth to="#section1">Section introduction</HashLink></li>
+                    <li><HashLink smooth to="#section2">Projects récents</HashLink></li>
+                    <li><HashLink smooth to="#section3">À propos de moi</HashLink></li>
+                    <li><HashLink smooth to="#section4">Services offerts</HashLink></li>
+                    <li><HashLink smooth to="#section5">Compétences</HashLink></li>
+                    <li><HashLink smooth to="#section6">Contacts</HashLink></li>
+                    </ul>
             </aside>
             <div className="portolioContent">
             <section className="hidden" id="section1">
@@ -136,7 +137,7 @@ form.addEventListener('submit', async (event) => {
                 </div>
             </section>
             <section className="hidden" id="section6">
-                <div className="Contact">
+                <div className="Contact" id="contact">
                     <h1>Contact</h1>
                     <form id="contact-form">
                         <label for="name">Nom :</label>

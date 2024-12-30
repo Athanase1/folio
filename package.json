@@ -1,13 +1,14 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://github.com/Athanase1/portfolio/",
+  "homepage": "https://athanase.github.io/folio",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.28.1",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1"
   },
   "scripts": {

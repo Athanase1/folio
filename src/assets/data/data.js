@@ -15,6 +15,10 @@ import Mysql from "../img/mysql.png";
 import Php from "../img/php.jpg";
 import Plsql from "../img/plsql.jpg";
 import Postgre from "../img/postgress.webp";
+import App1 from "../img/app11.png";
+import App2 from "../img/app21.png";
+import App3 from "../img/app31.png"
+import App4 from "../img/port.png";
 
 export const Backend = [
     {
@@ -99,5 +103,37 @@ export const Autres = [
         nom:"WebStorm",
         img:Webstorm,
     },
+]
+
+export const Project = [
+    
+    {
+        id:0,
+        src:App1,
+        titre:"Calculer inverse Taxe",
+        desc:"Une petite application qui calcule les taxe selon le montant hors taxe fourni par l'utilisateur. L'interface est generée grace à la manipulation du Dom avec le Js.",
+        link:"https://athanase1.github.io/calculerTaxe/"
+    },
+    {
+        id:1,
+        src:App2,
+        titre:"Drum Kit",
+        desc:"Une application qui permet de jouer de les musique à l'aide du clavier.",
+        link:"https://athanase1.github.io/drum/"
+    },
+    {
+        id:2,
+        src:App3,
+        titre:"Simon Game",
+        desc:"Une application de jeu.",
+        link:"https://athanase1.github.io/game/"
+    },
+    {
+        id:3,
+        src:App4,
+        titre:"Mon portfolio",
+        desc:"Un site web crée dans le but de démontrer mes compétences à mes futures employeurs.",
+        link:"https://athanase1.github.io/folio/"
+    }
 ]
 

@@ -43,35 +43,38 @@ useEffect(() => {
 }, [isPaused]);
 
   
-    const prevSlide = () => {
-      setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-    };
-  
-    const nextSlide = () => {
-      setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-    };
+const nextSlide = () => {
+  setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+};
+
+const prevSlide = () => {
+  setCurrentIndex((prevIndex) =>
+    (prevIndex - 1 + images.length) % images.length
+  );
+};
       // Défilement automatique
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000); // Change d'image toutes les secondes
     return () => clearInterval(interval); // Nettoie l'intervalle lorsque le composant est démonté
   }, []);
     return (
-      <div className="carousel"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
-        <i className="arrow prev bi bi-chevron-compact-left" onClick={prevSlide}>
+      <div
+      className="carousel"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      <i className="arrow prev bi bi-chevron-compact-left" onClick={prevSlide}></i>
+      <div className="carousel-content" style={{ backgroundImage: `url(${images[currentIndex].src})` }}>
+        <div
+          className="legend"
           
-        </i>
-        <div className="carousel-content">
-        <img src={images[currentIndex].src} alt={`Slide ${currentIndex + 1}`} />
-        <p className="description">{images[currentIndex].description}</p>
-        <a href="/projets">Savoir plus</a>
+        >
+          <p className="description">{images[currentIndex].description}</p>
+          
+        </div>
       </div>
-        <i className="arrow next bi bi-chevron-compact-right" onClick={nextSlide}>
-        
-        </i>
-      </div>
+      <i className="arrow next bi bi-chevron-compact-right" onClick={nextSlide}></i>
+    </div>
     );
   };
   

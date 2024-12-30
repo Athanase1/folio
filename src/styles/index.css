@@ -1,4 +1,8 @@
 /*===============================Home page==========================================*/
+html {
+    scroll-behavior: smooth;
+  }
+  
 .Home{
     display: flex;
     color: white;
@@ -34,10 +38,7 @@
     background-position: top;
     background-repeat: no-repeat;
 }
-.photo:hover{
-    transform: scaleX(1.2);
-    transition: all 3s;
-}
+
 
 .about{
     width: 90%;
@@ -59,8 +60,7 @@
     color: gray;
 }
 .about:hover{
-    transform: scaleX(1.1);
-    transition: all 3s;
+    outline: 1px solid white;
 }
 .btns{
    margin-top: 1rem;
@@ -85,8 +85,9 @@ button:hover{
 @media screen and (max-width:400px){
     .desc{
         flex-direction: column;
-        
+        border: none;
     }
+  
     .Home{
         flex-direction: column-reverse;
         background-color: whitesmoke;
@@ -105,18 +106,24 @@ button:hover{
     .moi{
         align-items: center;
         width: 100%;
-        
+        animation: none;
+        transition: none;
+        transform: none; 
     }
     .about{
         width: 99%;
         padding: 4px;
         align-items: center;
         box-sizing: border-box;
+        border: none;
     }
     .about p{
         font-size: 0.5rem;
         text-align: justify;
         width: 100%;
+        animation: none;
+        transition: none;
+        transform: none;
     }
     .about h1{
         border-bottom: 3px solid black;
@@ -130,6 +137,9 @@ button:hover{
     }
     .btns button{
         min-width: 80%;
+        animation: none;
+        transition: none;
+        transform: none;
     }
    
     .photo{
@@ -141,8 +151,13 @@ button:hover{
         background-position: center;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
+        animation: none;
+        transition: none;
+        transform: none;
     }
-    
+    .animated-text{
+        animation: none;
+    }
 }
 @media screen and (min-width:401px) and (max-width:1000px){
     .Home{
@@ -155,7 +170,7 @@ button:hover{
         background-repeat: no-repeat;
         padding: 0;
         color: white;
-       
+        height: 100vh;
     }
    
     .photo{
