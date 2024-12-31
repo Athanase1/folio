@@ -37,7 +37,7 @@ export default function Header({ Onclick, isShow }) {
                             `link ${isActive ? "active" : "inactive"}`
                         }
                         onClick={Onclick}
-                        to="/profile"
+                        to="/portfolio"
                     >
                         Portfolio
                     </NavLink>

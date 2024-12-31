@@ -65,13 +65,7 @@ const prevSlide = () => {
     >
       <i className="arrow prev bi bi-chevron-compact-left" onClick={prevSlide}></i>
       <div className="carousel-content" style={{ backgroundImage: `url(${images[currentIndex].src})` }}>
-        <div
-          className="legend"
-          
-        >
           <p className="description">{images[currentIndex].description}</p>
-          
-        </div>
       </div>
       <i className="arrow next bi bi-chevron-compact-right" onClick={nextSlide}></i>
     </div>

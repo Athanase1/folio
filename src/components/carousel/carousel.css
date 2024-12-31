@@ -36,9 +36,14 @@
   .description {
     margin: 10px 0;
     font-size:1vw;
+    font-weight: bold;
     text-align: center;
-   
-    
+    opacity: 2;
+    color: white;
+    font-size: 2rem;
+    background-color: black;
+    border-radius: 5px;
+    padding: 1rem;
   }
   .legend{
     position: absolute;
@@ -46,8 +51,6 @@
     transform: translateX(-50%);
     color: black;
     font-weight: bold;
-
-  
     background-color: white;
     padding: 0.5rem;
     border-radius: 10px;

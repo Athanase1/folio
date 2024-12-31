@@ -13,21 +13,25 @@
     
 }
 .img{
-    height: 60% !important;
+    height: 50% !important;
 }
 .card{
- 
-    height: fit-content !important;
-    padding: 1rem !important;
+    height: 400px !important;
+   
     width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 .card-body{
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
+   align-items: center;
    justify-content: center;
     width: 99%;
+    
 }
 .card p{
     font-size: 1vw !important;
@@ -38,7 +42,10 @@
     justify-content: center;
     align-items: center;
     gap: 1vw;
-    width: 100%;
+    width: fit-content;
+    position: absolute;
+    bottom: 2px;
+    right: 3px;
 }
 @media screen and (max-width: 767px){
     .card p{
@@ -50,8 +57,6 @@
     .card{
         min-width: 99% !important;
     }
-    .projects a{
-        min-width: 100%;
-    }
+ 
 }
 

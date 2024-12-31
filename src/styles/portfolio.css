@@ -6,20 +6,25 @@
     margin: 0;
     padding: 0;
     display: flex;
-    height: 95vh;
+    max-height: 100vh;
     padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
 }
 aside{
     width: fit-content;
     color: black;
     padding: 1rem;
     background-color: azure;
-    height: 92vh;
+    height: 100%;
     border-radius: 20px;
-    margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 aside:hover{
    
@@ -42,15 +47,52 @@ aside li a{
 aside li:hover a{
    color: gray;
 }
-.portolioContent{
+
+.portfolioContent{
     flex: 1;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+    overflow: auto; /* Active le défilement vertical */
+    height: 100%; /* Prend tout l'espace disponible */
+    padding-right: 1rem; /* Optionnel : Ajoute un peu d'espace pour le défilement */
+    scrollbar-width: thin; /* Améliore l'apparence de la scrollbar sur Firefox */
+}
+.portfolioContent::-webkit-scrollbar {
+    width: 8px;
+}
+
+.portfolioContent::-webkit-scrollbar-thumb {
+    background: #888; /* Couleur de la barre de défilement */
+    border-radius: 10px;
+}
+
+.portfolioContent::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur au survol */
 }
 section{
     display: grid;
     place-items: center;
     align-items: center;
-    min-height: 100vh;
+    max-height: 600px;
+    background-color: #19181b;
+    width: 80%;
+    border-radius: 20px;
+    color: gray;
+}
+.carou{
+    flex: 1;
+    padding: 1rem;
+}
+/* ============= section3============*/
+.aprops{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
 }
 
 .hidden{
@@ -79,39 +121,29 @@ aside ul h1{
     font-size: 1vw;
     color: #131316;
    }
-   .aprops{
-        width: 80vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
-   }
-   .aprops p{
-        text-align: left;
-        font-size: 1vw;
-        padding: 1rem;
-        width: 95%;
-        padding: 1rem;
-        border-radius: 20px;
-       
-   }
+  
    form{
     display: flex;
     flex-direction: column;
    }
-   .aprops p:hover{
-        box-shadow: 0 2px 2px white;
-       
-   }
+
    label{
     margin-top: 1vh;
+   }
+   /*=============section 4===============*/
+   .service{
+       
+        flex: 1;
+        padding: 1%;
    }
    .service ul{
         list-style: number;
         display: flex;
-     
-        margin: 1rem;
+        flex-direction: column;
+        width: 99%;
+        height: 100%;
+        justify-content: space-between;
    }
    #submit{
     margin-top: 1rem;
@@ -119,13 +151,18 @@ aside ul h1{
    }
    .service ul li{
     margin: 0 1rem;
+    list-style: none;
     font-size: 2vw;
-   }
-   section h1{
+    color: gray;
+    height: fit-content;
+    padding: 1rem;
     width: 100%;
-    text-align: center;
-    border-bottom: 2px solid white;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
    }
+
+ 
    textarea{
     border-radius: 10px;
    }
@@ -136,14 +173,113 @@ aside ul h1{
     border: none;
     text-align: left;
    }
+   /*================section 5 ==============*/
+   .filter{
+     width: 99%;
+     height: fit-content;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   .filter ul{
+        display: flex;
+        list-style: none;
+        gap: 0.3rem;
+        width: 99%;
+        overflow: auto;
+        align-items: center;
+        justify-content: center;
+   }
+  
+   .filter ul li button{
+    animation: none;
+    transform: none;
+    height: fit-content;
+    color: gray;
+    width: fit-content;
+    padding: 0.2rem;
+    font-size: 1vw;
+    background: none;
+    border: none;
+   
+    text-decoration: underline;
+   }
+   .filter ul button:checked{
+        background-color: red;
+   }
+   .card-container{
+    flex: 1;
+    display: flex;
+    width: 99%;
+    gap: 1rem;
+    padding: 1%;
+    overflow: auto;
+    align-items: center;
+    justify-content: flex-start;
+    scroll-behavior: smooth; /* Défilement fluide */
+    scrollbar-width: thin;
+    
+}
+.com {
+    width: 300px;
+    min-width: 300px;
+    height: 300px;
+    background-color: #19181b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.com:hover{
+    opacity: 0.9;
+}
+.com img{
+    height: 90%;
+    width: 100%;
+}
+.com h5{
+    color: gray;
+    text-transform: uppercase;
+}
+#section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#section1 img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
 
 /*@media(prefers-reduced-motion){
     .hidden{
         transition: none;
     }
 }*/
-@media screen and (max-width:500px){
-
+@media screen and (max-width:767px){
+    section{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: fit-content !important;
+        box-shadow: none;
+        color: white;
+    }
+    .portfolioContent{
+        gap: 0;
+    }
+    #section2{
+        display: none;
+    }
+    .service ul {
+        gap: 0;
+        justify-content: center;
+    }
     aside{
         display: none;
     }
@@ -165,9 +301,12 @@ aside ul h1{
         flex-direction: column;
         align-items: center;
    }
+   .service ul li{
+    font-size: 3vw;
+   }
    .aprops p{
         font-size: 4vw;
-        text-align: center;
+        text-align: left;
         box-shadow: none;
    }
    .card{
@@ -223,32 +362,4 @@ aside ul h1{
     }
 
 }
-.card-container{
-    display: flex;
-    gap: 1rem;
-    margin: 1rem;
-    overflow: hidden;
-    align-items: flex-start;
-}
-.card {
-    width: 300px;
-    height: 300px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    overflow: hidden;
-    
-}
-.card:hover{
-    opacity: 0.9;
-}
-.card img{
-    height: 90%;
-    width: 100%;
-}
-.card h5{
-    color: #131316;
-    
-}
+
