@@ -1,4 +1,4 @@
-import React, {useEffect, useState,useRef} from "react";
+import React, {useEffect, useState} from "react";
 import "../../styles/portfolio.css"
 import Me from "../../assets/img/Moi1.jpg"
 import { Frontend, Backend, Autres } from "../../assets/data/data";
@@ -48,9 +48,7 @@ form.addEventListener('submit', async (event) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("show");
-                } else{
-                    entry.target.classList.remove("show");
-                }
+                } 
             });
         });
 
@@ -63,31 +61,9 @@ form.addEventListener('submit', async (event) => {
             hiddenElements.forEach((el) => observer.unobserve(el));
         };
     }, []); // Le tableau vide signifie que cet effet ne sera exécuté qu'une seule fois après le montage
-    const portfolioRef = useRef(null);
+   
 
-    useEffect(() => {
-        const startScrolling = () => {
-          const { scrollLeft, scrollWidth, clientWidth } = portfolioRef.current;
-    
-          // Si le bord droit est atteint, attend 2 secondes avant de recommencer
-          if (scrollLeft + clientWidth >= scrollWidth) {
-            setTimeout(() => {
-              portfolioRef.current.scrollLeft = 0; // Revient au début
-            }, 2000); // Pause de 2 secondes
-          } else {
-            // Continue de défiler vers la droite
-            portfolioRef.current.scrollBy({
-              left: 5, // Ajuste cette valeur pour la vitesse
-              behavior: "smooth",
-            });
-          }
-        };
-    
-        // Démarrage automatique du défilement
-        const scrollInterval = setInterval(startScrolling, 30); // Définit la vitesse du défilement
-    
-        return () => clearInterval(scrollInterval); // Nettoie l'intervalle lors du démontage
-      }, []);
+
     return (
         <div className="portfolio">
            <aside>
@@ -143,10 +119,7 @@ form.addEventListener('submit', async (event) => {
                         <li><button type="radio" value={2} onClick={handleClick}>Autres</button></li>
                     </ul>
                  </div>
-                 <div className="card-container"
-                  ref={portfolioRef}
-                  style={{ whiteSpace: "nowrap" }}
-                 >
+                 <div className="card-container">
                     {data.map((item) =>(
                         <div className="com" key={item.id}>
                           <img src={item.img} className="" alt="..." />

@@ -17,6 +17,7 @@ export default function Header({ Onclick, isShow }) {
                         onClick={Onclick}
                         to="/"
                     >
+                        <i className="bi bi-house-door"></i>
                         Home
                     </NavLink>
                 </li>
@@ -27,7 +28,7 @@ export default function Header({ Onclick, isShow }) {
                         }
                         onClick={Onclick}
                         to="/projets"
-                    >
+                    >   <i className="bi bi-cast"></i>
                         Projets
                     </NavLink>
                 </li>
@@ -38,7 +39,7 @@ export default function Header({ Onclick, isShow }) {
                         }
                         onClick={Onclick}
                         to="/portfolio"
-                    >
+                    >   <i className="bi bi-briefcase"></i>
                         Portfolio
                     </NavLink>
                 </li>

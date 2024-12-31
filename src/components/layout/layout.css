@@ -12,7 +12,7 @@
     "main main main"
     "footer footer footer";
 }
-.bi-list{
+.bi-list, .bi-x{
     display: none;
 }
 /*============================================================================== header styles =======================================================================================*/
@@ -22,21 +22,26 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-   margin-bottom: 0;
+    margin-bottom: 0;
     width: 100%;
     background-color: black; /* Noir avec 70% d'opacité */
 }
 header ul{
     display: flex;
     list-style: none;
+ 
 }
 header ul li{
     margin: 0 1rem;
+    
 }
 header ul li a{
     text-decoration: none;
     color: white;
-    
+    gap: 0.2vw;
+    display: flex;
+    font-size: 0.5vw;
+    align-items: center;
 }
 a.active{
     border-bottom: 4px solid white;
@@ -99,7 +104,7 @@ footer{
     }
     header ul {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         width: 100%;
         display: none;
         height: 100vh;
@@ -117,8 +122,8 @@ footer{
         transform: translateX(0); /* Affiché */
     }
     header ul li a{
-        color: lightblue;
-        font-size: 3rem;
+        color: black;
+        font-size: 1rem;
     }
     a.active{
         color: red;
