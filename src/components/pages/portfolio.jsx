@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
+import Social from "../socialMedia/Social";
 import "../../styles/portfolio.css"
-import Me from "../../assets/img/Moi1.jpg"
+import Me from "../../assets/img/moi5.jpg"
 import { Frontend, Backend, Autres } from "../../assets/data/data";
 import Carousel from "../carousel/carousel";
 import { HashLink } from 'react-router-hash-link';
@@ -48,7 +49,9 @@ form.addEventListener('submit', async (event) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("show");
-                } 
+                } else{
+                    entry.target.classList.remove("show")
+                }
             });
         });
 
@@ -78,29 +81,34 @@ form.addEventListener('submit', async (event) => {
                     </ul>
             </aside>
             <div className="portfolioContent">
-            <section className="hidden" id="section1">
-                <img src={Me} alt="moi" />
-                <div className="section-item" >
+            <section  id="section1">
+                <h1>Introduction</h1>
+                <div className="hidden" >
+                    <div>
+                        <img src={Me} alt="moi" />
+                    </div>
+                    
                     <h1 id="spc">Je suis Athanase,</h1>
                     <h3 >Développeur Web & Applications Mobiles Full Stack</h3>
                     <h4 className="fw-light">Passionné par le code, je transforme vos idées en solutions numériques innovantes.</h4>
+                    <Social/>
                 </div>
             </section>
-            <section className="hidden" id="section2">
+            <section  id="section2">
                 <h1>Projets récents</h1>
-                <div className="carou">
+                <div className="carou hidden">
                 <Carousel/>
                 </div>
             </section>
-            <section className="hidden" id="section3">
-                <div className="aprops">
-                      <h1>À propos de moi</h1>
+            <section  id="section3">
+                    <h1>À propos de moi</h1>
+                <div className="aprops hidden">
                       <p className="fw-lighter">Développeur full stack passionné par le développement d'applications web et mobiles. Solide maîtrise de technologies telles que React, React Native, Node.js, Html, JavaScript, Php, PostgreSQL, MySql et une expertise dans la création d'interfaces utilisateurs intuitives et performantes. Capable de gérer des projets de bout en bout, de la conception à la mise en production, avec une attention particulière à l'expérience utilisateur et aux bonnes pratiques de développement. En quête d'une nouvelle opportunité pour contribuer à des projets innovants dans une équipe dynamique.</p>
                 </div>
             </section>
-            <section className="hidden" id="section4">
+            <section  id="section4">
                 <h1>Services offerts</h1>
-                <div className="service">
+                <div className="service hidden">
                     <ul>
                         <li><i className="bi bi-globe"></i>Développement de sites web réactifs.</li>
                         <li><i className="bi bi-app"></i>Création d’applications mobiles.</li>
@@ -109,10 +117,10 @@ form.addEventListener('submit', async (event) => {
                     </ul>
                 </div>
             </section>
-            <section className="hidden" id="section5">
+            <section id="section5">
                  <h1>Competences</h1>
-                 
-                 <div className="filter">
+                 <div className="hidden">
+                 <div className="filter ">
                     <ul>
                         <li><button type="radio" value={0} onClick={handleClick}>Front-End</button></li>
                         <li><button type="radio" value={1} onClick={handleClick}>Back-End</button></li>
@@ -127,10 +135,11 @@ form.addEventListener('submit', async (event) => {
                         </div>
                     ))}
                    </div>
+                   </div>
             </section>
-            <section className="hidden" id="section6">
-                <div className="Contact" id="contact">
-                    <h1>Contact</h1>
+            <section  id="section6">
+                <h1>Contact</h1>
+                <div className="Contact hidden" id="contact">
                     <form id="contact-form">
                         <label htmlFor="name">Nom :</label>
                         <input type="text" id="name" name="name" required />

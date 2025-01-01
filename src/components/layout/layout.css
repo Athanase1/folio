@@ -11,6 +11,7 @@
     grid-template-areas: "header header header"
     "main main main"
     "footer footer footer";
+    background-color: black;
 }
 .bi-list, .bi-x{
     display: none;

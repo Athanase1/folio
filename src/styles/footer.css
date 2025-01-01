@@ -4,6 +4,7 @@ footer{
     justify-content: space-around;
     width: 100%;
     font-size: 1vw;
+    color: gray;
 }
 footer div{
     display: flex;
@@ -11,13 +12,7 @@ footer div{
     justify-content: center;
     
 }
-footer div i{
-    margin: 0 0.5rem;
-    color: black;
-}
-footer div i:hover{
-    color: gray;
-}
+
 
 @media screen and (max-width: 1024px){
     footer{

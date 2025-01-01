@@ -1,0 +1,25 @@
+.socials{
+    width: fit-content;
+    height: fit-content;
+    flex-direction: row !important;
+    display: flex;
+    gap: 1rem;
+}
+.socials a{
+    color: red;
+   
+}
+
+
+.socials a:nth-child(1):hover{
+    color: blue;
+    background-color: white;
+}
+.socials a:nth-child(2):hover{
+    color: blue;
+    background-color: white;
+}
+.socials a:nth-child(3):hover{
+    color: red;
+}
+

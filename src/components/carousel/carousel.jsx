@@ -9,19 +9,19 @@ import img6 from "../../assets/img/app32.png"
 const images = [
     {
       src: img1,
-      description: "Une petite application permettant de deduire les taxe payés selon le montant total.",
+      description: "Calculer Taxe",
     },
     {
       src: img2,
-      description: "Une petite application permettant de deduire les taxe payés selon le montant total.",
+      description: "Calculer Taxe",
     },
     {
       src: img3,
-      description: "Une petite application permettant de deduire les taxe payés selon le montant total.",
+      description: "Calculer Taxe",
     },
     {
       src: img4,
-      description: "Jeu de musique avec les touchs du clavier",
+      description: "Drum kit",
     },
     {
       src: img5,
@@ -64,10 +64,11 @@ const prevSlide = () => {
       onMouseLeave={() => setIsPaused(false)}
     >
       <i className="arrow prev bi bi-chevron-compact-left" onClick={prevSlide}></i>
-      <div className="carousel-content" style={{ backgroundImage: `url(${images[currentIndex].src})` }}>
+      <div className="carousel-content" style={{backgroundImage: `url(${images[currentIndex].src})`}}>
+        <img src={images[currentIndex].src} alt={images[currentIndex].description} />
           <p className="description">{images[currentIndex].description}</p>
       </div>
-      <i className="arrow next bi bi-chevron-compact-right" onClick={nextSlide}></i>
+      <i className="arrow next bi bi-chevron-compact-right" onClick={nextSlide}></i>.co
     </div>
     );
   };
