@@ -84,16 +84,14 @@ section{
     border-radius: 20px;
     color: gray;
     gap: 1rem;
+   
 }
 #section1 div{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.carou{
-    flex: 1;
-    padding: 1rem;
-}
+
 /* ============= section3============*/
 .aprops{
     width: 100%;
@@ -252,6 +250,22 @@ aside ul h1{
     border-radius: 50%;
 }
 
+.plist{
+    display: flex;
+    width: 99%;
+    
+    overflow: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+h4{
+    font-size: 2vw;
+    font-style: italic;
+}
+
 
 /*@media(prefers-reduced-motion){
     .hidden{
@@ -269,15 +283,27 @@ aside ul h1{
     #section1{
         justify-content: center;
     }
+    #section1 .det{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1rem;
+        color: white !important;
+        align-items: center !important;
+    }
+    #section1 div div{
+        display: flex;
+        flex-direction: column;
+    }
+
     #section1 img{
-        width: 200px;
-        height: 200px;
+        width: 60px;
+        height: 80px;
         border-radius: 10px;
     }
-    #section1 div h1{
+    #section1 div div h1{
         font-size: 2rem;
     }
-    #section1 div h3{
+    #section1 div div h3{
         font-size: 0.8rem;
     }
     #section1 div h4{

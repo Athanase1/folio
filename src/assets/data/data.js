@@ -112,28 +112,32 @@ export const Project = [
         src:App1,
         titre:"Calculer inverse Taxe",
         desc:"Une petite application qui calcule les taxe selon le montant hors taxe fourni par l'utilisateur. L'interface est generée grace à la manipulation du Dom avec le Js.",
-        link:"https://athanase1.github.io/calculerTaxe/"
+        link:"https://athanase1.github.io/calculerTaxe/",
+        date:"20-10-2024",
     },
     {
         id:1,
         src:App2,
         titre:"Drum Kit",
         desc:"Une application qui permet de jouer de les musique à l'aide du clavier.",
-        link:"https://athanase1.github.io/drum/"
+        link:"https://athanase1.github.io/drum/",
+        date:"10-06-2024"
     },
     {
         id:2,
         src:App3,
         titre:"Simon Game",
         desc:"Une application de jeu.",
-        link:"https://athanase1.github.io/game/"
+        link:"https://athanase1.github.io/game/",
+        date:"20-06-2024"
     },
     {
         id:3,
         src:App4,
         titre:"Mon portfolio",
         desc:"Un site web crée dans le but de démontrer mes compétences à mes futures employeurs.",
-        link:"https://athanase1.github.io/folio/"
+        link:"https://athanase1.github.io/folio/",
+        date:"10-01-2025",
     }
 ]
 

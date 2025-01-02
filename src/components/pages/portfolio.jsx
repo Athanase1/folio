@@ -3,7 +3,8 @@ import Social from "../socialMedia/Social";
 import "../../styles/portfolio.css"
 import Me from "../../assets/img/moi5.jpg"
 import { Frontend, Backend, Autres } from "../../assets/data/data";
-import Carousel from "../carousel/carousel";
+import { Project } from "../../assets/data/data";
+import Pcard from "../projets/pcard";
 import { HashLink } from 'react-router-hash-link';
 const Competences = [Frontend, Backend, Autres]
 export default function Profiles(){
@@ -83,21 +84,24 @@ form.addEventListener('submit', async (event) => {
             <div className="portfolioContent">
             <section  id="section1">
                 <h1>Introduction</h1>
-                <div className="hidden" >
-                    <div>
-                        <img src={Me} alt="moi" />
-                    </div>
+                <div className="hidden det" >
                     
+                        <img src={Me} alt="moi" />
+                    
+                    <div className="">
                     <h1 id="spc">Je suis Athanase,</h1>
                     <h3 >Développeur Web & Applications Mobiles Full Stack</h3>
                     <h4 className="fw-light">Passionné par le code, je transforme vos idées en solutions numériques innovantes.</h4>
                     <Social/>
+                    </div>
                 </div>
             </section>
             <section  id="section2">
                 <h1>Projets récents</h1>
-                <div className="carou hidden">
-                <Carousel/>
+                <div className="plist hidden">
+                 {Project.map((item, index) =>(
+                            <Pcard key={item.id || index} src={item.src} titre={item.titre} desc={item.desc} link={item.link} day={item.date} />
+                    ))}
                 </div>
             </section>
             <section  id="section3">
