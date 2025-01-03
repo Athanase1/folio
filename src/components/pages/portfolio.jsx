@@ -9,6 +9,7 @@ import { HashLink } from 'react-router-hash-link';
 const Competences = [Frontend, Backend, Autres]
 export default function Profiles(){
     const [index, setIndex] = useState(0)
+
     const data = Competences[index]
     function handleClick(e){
         let value = e.target.value
@@ -126,9 +127,9 @@ form.addEventListener('submit', async (event) => {
                  <div className="hidden">
                  <div className="filter ">
                     <ul>
-                        <li><button type="radio" value={0} onClick={handleClick}>Front-End</button></li>
-                        <li><button type="radio" value={1} onClick={handleClick}>Back-End</button></li>
-                        <li><button type="radio" value={2} onClick={handleClick}>Autres</button></li>
+                        <li><button  className={index === 0 ? 'bactive' : ''} value={0} onClick={handleClick}>Front-End</button></li>
+                        <li><button  className={index === 1 ? 'bactive' : ''} value={1} onClick={handleClick}>Back-End</button></li>
+                        <li><button  className={index === 2 ? 'bactive' : ''} value={2} onClick={handleClick}>Autres</button></li>
                     </ul>
                  </div>
                  <div className="card-container">
@@ -143,17 +144,21 @@ form.addEventListener('submit', async (event) => {
             </section>
             <section  id="section6">
                 <h1>Contact</h1>
-                <div className="Contact hidden" id="contact">
+                <div className="contacte hidden" id="contact">
                     <form id="contact-form">
-                        <label htmlFor="name">Nom :</label>
-                        <input type="text" id="name" name="name" required />
-
-                        <label htmlFor="email">Email :</label>
+                        <div className="inputcon">
+                            <label htmlFor="name">Nom</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        
+                        <div className="inputcon">
+                        <label htmlFor="email">Email</label>
                         <input type="email" id="email" name="email" required />
-
-                        <label htmlFor="message">Message :</label>
+                        </div>
+                        <div className="inputcon">
+                        <label htmlFor="message" id="ms">Message</label>
                         <textarea id="message" name="message" required></textarea>
-
+                        </div>
                         <button id="submit" type="submit">Envoyer</button>
                     </form>
                 </div>
