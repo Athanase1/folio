@@ -38,10 +38,12 @@
 
 @media screen and (max-width: 767px){
     .carte p{
-        font-size:  3vw !important;
+        font-size:  2.5vw !important;
     }
     .card-corps{
-        color: black !important;
+        color: rgb(198, 226, 255);
+        
+        border-radius: 20px;
     } 
     .details a i{
         font-size:  3vw !important;
@@ -56,7 +58,7 @@
         align-items: center;
         gap: 2px;
         height: 200px !important;
-        background-color: white;
+        background-color: rgb(112,128,144);
         color: gray !important;
         padding: 1%;
         border-radius: 20px;
@@ -69,9 +71,10 @@
     .card-corps{
         flex: 1;
         width: 100%;
+        padding: 1%;
     }
     .details h6{
         font-size: 2vw !important;
-        color: gray;
+        color: rgb(198, 226, 255);
     }
 }

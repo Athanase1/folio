@@ -45,6 +45,7 @@ html {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     border-right-style: dashed;
     border-width: 3px;
     padding: 1%;
@@ -63,12 +64,9 @@ html {
 }
 .about a{
     font-size: 1rem;
-    color: gray;
+    color: rgb(198, 226, 255);
 }
-.about:hover{
-   background-color: rgb(29, 26, 26);
 
-}
 
 @media screen and (max-width:767px){
     .desc{
@@ -78,7 +76,7 @@ html {
   
     .Home{
         flex-direction: column-reverse;
-        background-color: whitesmoke;
+       background-color: white;
         color: black;
        margin: 0;
        width: 100%;
@@ -98,7 +96,7 @@ html {
        border: none; 
     }
     .about a{
-        color: white;
+        color: rgb(198, 226, 255);
         text-decoration: underline;
     }
     .about{
@@ -108,6 +106,8 @@ html {
         box-sizing: border-box;
         border: none;
         border-radius: 20px;
+        color: rgb(198, 226, 255);
+        background-color: rgb(112,128,144);
        
     }
     .about p{
@@ -135,6 +135,9 @@ html {
         animation: none;
         transition: none;
         transform: none;
+    }
+    .liens{
+        justify-content: space-between;
     }
    
     .photo{
@@ -171,6 +174,9 @@ html {
     .photo{
        display: none;
     }
+    .liens{
+        justify-content: space-around;
+    }
     .desc{
         width: 100%;
         align-items: center;
@@ -193,12 +199,13 @@ html {
     .about{
         width: 80%;
         align-items: center;
-        background-color: aliceblue;
+        color: rgb(198, 226, 255);
+        background-color: rgb(112,128,144);
         border-radius: 20px;
     }
     .about p{
         font-size: 1.5vw;
-        background-color: aliceblue;
+        
         color: black;
     }
     .about h1{

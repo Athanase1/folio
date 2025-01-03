@@ -97,11 +97,12 @@ footer{
         align-items: flex-start;
         z-index: 1;
         height: fit-content;
+        position: fixed;
         border-radius: 0;
         padding-top: 0;
         background-image: url("../../assets/img/moi4.jpg");
         background-position: top;
-        
+        background-size: cover;
     }
     header ul {
         flex-direction: column;
