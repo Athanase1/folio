@@ -134,6 +134,14 @@ html {
         transition: none;
         transform: none;
     }
+    .btns button:nth-child(2){
+        background-color: aqua;
+    }
+    .btns button:nth-child(1){
+        background-color: blue;
+        color: aliceblue;
+    }
+    
     .liens{
         justify-content: space-between;
     }

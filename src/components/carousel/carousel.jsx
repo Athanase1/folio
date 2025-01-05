@@ -63,12 +63,10 @@ const prevSlide = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <i className="arrow prev bi bi-chevron-compact-left" onClick={prevSlide}></i>
-      <div className="carousel-content" style={{backgroundImage: `url(${images[currentIndex].src})`}}>
-        <img src={images[currentIndex].src} alt={images[currentIndex].description} />
+          <i className="arrow prev  bi-chevron-compact-left" onClick={prevSlide}></i>
+          <img src={images[currentIndex].src} alt={images[currentIndex].description} />
           <p className="description">{images[currentIndex].description}</p>
-      </div>
-      <i className="arrow next bi bi-chevron-compact-right" onClick={nextSlide}></i>.co
+          <i className="arrow next  bi-chevron-compact-right" onClick={nextSlide}></i>
     </div>
     );
   };

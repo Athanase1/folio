@@ -292,6 +292,12 @@ form{
     right: 10px;
     padding: 5px;
    }
+   #submit:hover{
+        opacity: 0.9;
+        background-color: gray;
+        scale: 1.2;
+        transition: all 2s;
+   }
    textarea{
         border-radius: 10px;
         height: 60px;
@@ -333,8 +339,8 @@ form{
     }
 
     #section1 img{
-        width: 60px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 10px;
     }
     #section1 div div h1{
@@ -394,15 +400,15 @@ form{
     position: relative;
 }
 aside{
-    width: 100%;
+    width: 99%;
     height: fit-content;
     margin: 0;
     justify-content: center;
     padding: 0;
     position: absolute;
     z-index: 1;
-    top: 2px;
-    border-radius: 0;
+    top: 2.3rem;
+    border-radius: 10px;
 }
 h4{
     font-size: 1.5vw;
@@ -420,7 +426,7 @@ aside ul li{
 }
 
 aside ul li a{
-    font-size: 2vw;
+    font-size: 1vw;
     text-transform: uppercase;
     color: gray;
 }
@@ -464,8 +470,28 @@ label{
         bottom: -2px;
         right:4px;
     }
+   
     #section1{
         padding: 10px;
+    }
+    .com{
+        min-width: 150px !important;
+        height: 150px !important;
+        margin: 1rem;
+    }
+    .com img{
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+    }
+    .com h5{
+        font-size: 2vw;
+    }
+    .card-container{
+        gap: 1vw;
+    }
+    aside{
+        display: none;
     }
 }
 /*============================== animation ==================*/
