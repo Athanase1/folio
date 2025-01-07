@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Social from "../socialMedia/Social";
 import "../../styles/portfolio.css"
-import Me from "../../assets/img/moi5.jpg"
+import Me from "../../assets/img/moi4.jpg"
 import { Frontend, Backend, Autres } from "../../assets/data/data";
 import { Project } from "../../assets/data/data";
 import Pcard from "../projets/pcard";
@@ -84,16 +84,15 @@ form.addEventListener('submit', async (event) => {
             </aside>
             <div className="portfolioContent">
             <section  id="section1">
-                <h1>Introduction</h1>
                 <div className="hidden det" >
-                    
-                        <img src={Me} alt="moi" />
-                    
-                    <div className="">
-                    <h1 id="spc">Je suis Athanase,</h1>
-                    <h3 >Développeur Web & Applications Mobiles Full Stack</h3>
-                    <h4 className="fw-light">Passionné par le code, je transforme vos idées en solutions numériques innovantes.</h4>
-                    <Social/>
+                    <div className="me">
+                         <img src={Me} alt="moi" />
+                    </div>
+                    <div className="apro">
+                        <h1 id="spc">Je suis Athanase,</h1>
+                        <h3 >Développeur Web & Applications Mobiles Full Stack</h3>
+                        <h4 className="fw-light">Passionné par le code, je transforme vos idées en solutions numériques innovantes.</h4>
+                        <Social/>
                     </div>
                 </div>
             </section>

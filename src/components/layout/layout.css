@@ -24,6 +24,7 @@ header{
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
+    height: 5vh;
     width: 100%;
     background-color: black; /* Noir avec 70% d'opacité */
 }
@@ -56,13 +57,15 @@ header ul li a:hover{
 
 main{
     grid-area: main;
-    max-width: 100%;
+    
     overflow: hidden;
+    flex: 1;
 }
 /*============================================================================== footer styles =======================================================================================*/
 
 footer{
     grid-area: footer;
+    height: auto;
 }
 
 @media screen and (max-width: 767px){

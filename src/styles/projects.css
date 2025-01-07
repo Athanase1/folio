@@ -61,14 +61,19 @@
 }
 
 @media screen and (max-width: 767px){
-   
+    .Projets-container{
+        background-color: white;
+    }
+    
     .section1{
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: fit-content;
         gap: 1vh;
         padding-top: 3rem;
         height: fit-content !important;
-        background-color: black;
+       
+        background-color: white !important;
+        width: 100% ;
     }
     .sous-sec2 .carte{
         min-width: 100% !important;
@@ -84,9 +89,42 @@
        
     }
     h1{
-        color: white !important;
+        color: black !important;
         margin-left: 0.5rem;
+        font-size: 3vw;
+        border-bottom: 2px solid black;
     }
+    .sous-sec2 h1{
+        display: none;
+    }
+    .sous-sec2 .carte{
+        flex-direction: column !important;
+        background:none ;
+        position: relative !important;
+    }
+    .sous-sec2 .carte img{
+        width: 100%;
+        height: 100% !important;
+        border-radius: 0 !important;
+    }
+    .sous-sec2 .carte .card-corps{
+        bottom: 2px;
+        color: black !important;
+        font-weight: bold;
+        opacity: 2;
+      
+    }
+    .sous-sec2 .carte .card-corps p{
+        font-size: 3vw !important;
+    }
+    .sous-sec2 .carte .card-corps a i{
+        color:  red;
+        font-size: 5vw !important;
+    }
+    .sous-sec2 .carte .card-corps h5{
+        color: black !important;
+    }
+
     .sous-sec2 h1{
        
         text-transform: uppercase;
@@ -104,6 +142,17 @@
     }
     .sous-sec1 .btns button:nth-child(1){
         background-color: palevioletred;
+    }
+    .sous-sec1 .btns{
+        flex-direction: row !important;
+        width: 100% !important;
+    }
+  
+    .sous-sec1 img{
+        display: none;
+    }
+    .sous-sec1{
+      
     }
 }
 @media screen and (max-width : 400px){

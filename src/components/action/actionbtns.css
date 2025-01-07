@@ -12,6 +12,7 @@
      font-weight: bold;
      cursor: pointer;
      animation: bottom 3s ease-in-out;
+     min-width: 300px !important;
  }
  .btns button:hover{
      outline: 2px solid red;
