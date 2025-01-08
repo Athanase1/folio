@@ -1,35 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/projects.css"
 //import Carousel from "../carousel/carousel";
 import { Project } from "../../assets/data/data";
-import ActionBtns from "../action/actionsbtns";
-import Emo from "../../assets/img/emoji.jpg"
-import Pcard from "../projets/pcard";
+//import ActionBtns from "../action/actionsbtns";
+//import Emo from "../../assets/img/emoji.jpg"
+//import Pcard from "../projets/pcard";
 
 export default function Projects(){
-  const mostRecentProject = Project.reduce((latestProject, currentProject) => {
-    const latestDate = new Date(latestProject.date.split("-").reverse().join("-"));
-    const currentDate = new Date(currentProject.date.split("-").reverse().join("-"));
-    return currentDate > latestDate ? currentProject : latestProject;
-}, Project[0]);
+  const [indexcourant, setIndexCurrent] = useState(0)
+  const [isPaused, setIsPaused] = useState(false);
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [isPaused]);
+  const nextSlide = () => {
+    setIndexCurrent((prevIndex) => (prevIndex + 1) % Project.length);
+  };
+  const prevSlide = () => {
+    setIndexCurrent((prevIndex) =>
+      (prevIndex - 1 + Project.length) % Project.length
+    );
+  };
+        // Défilement automatique
+    useEffect(() => {
+      const interval = setInterval(nextSlide, 5000); // Change d'image toutes les secondes
+      return () => clearInterval(interval); // Nettoie l'intervalle lorsque le composant est démonté
+    }, []);
     return (
-        <div className="Projets-container">
-          <div className="section1">
-            <div className="sous-sec1">
-              <img src={Emo} alt="Moi" />
-              <ActionBtns txt1="Tu veux un site?" txt2="M'embaucher?"/>
-            </div>
-            <div className="sous-sec2">
-              <h1>Projets le plus récent</h1>
-              <Pcard src={mostRecentProject.src} titre={mostRecentProject.titre} desc={mostRecentProject.desc} day={mostRecentProject.date} link={mostRecentProject.link}/>
-            </div>
+        <div className="Projets-container"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="carou-container">
+            
+           <i className="arrow prev  bi-chevron-compact-left" onClick={prevSlide}></i>
+          <img src={Project[indexcourant].src} alt={Project[indexcourant].titre} />
+          <p className="description">{Project[indexcourant].titre}</p>
+          <i className="arrow next  bi-chevron-compact-right" onClick={nextSlide}></i>
           </div>
-         <h1>Projets récents</h1>
-          <div className="projects">
-            {Project.map((item) =>(
-            <Pcard src={item.src} titre={item.titre} desc={item.desc} link={item.link} day={item.date}/>
-            ))}
-            </div> 
         </div>
     )
 }
